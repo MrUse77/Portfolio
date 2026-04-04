@@ -13,8 +13,8 @@ export default {
         'border-color': '#23263b',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Geist Variable', 'sans-serif'],
+        mono: ['JetBrains Mono Variable', 'monospace'],
       },
       borderRadius: {
         portfolio: '12px',
