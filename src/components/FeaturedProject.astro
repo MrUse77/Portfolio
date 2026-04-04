@@ -33,10 +33,10 @@ const { title, description, techStack, image, githubLink, liveLink } = Astro.pro
     <div class="p-8 card-gradient border border-border-color rounded-portfolio soft-glow shadow-2xl">
       <span class="font-mono text-xs text-electric-blue uppercase tracking-[0.2em] mb-2 block">Proyecto Destacado</span>
       <h3 class="text-2xl font-bold text-off-white mb-4">{title}</h3>
-      <p class="text-muted-grey text-base leading-relaxed mb-6">{description}</p>
+      <p class="text-muted-grey text-base leading-relaxed mb-6 font-normal">{description}</p>
       <div class="flex flex-wrap gap-3 mb-6">
         {techStack.map((tech) => (
-          <span class="px-3 py-1 bg-navy-dark text-[10px] font-mono text-electric-blue/80 rounded-full border border-border-color">
+          <span class="px-3 py-1 bg-navy-dark text-xs font-mono text-electric-blue/80 rounded-full border border-border-color">
             {tech}
           </span>
         ))}
