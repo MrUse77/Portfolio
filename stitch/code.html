@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agustín Doricich | Portfolio - Creative Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "navy-dark": "#08090d",
+                "navy-surface": "#121420",
+                "electric-blue": "#00e0ff",
+                "light-grey": "#cdd6f4",
+                "muted-grey": "#7f849c",
+                "off-white": "#f8f9fa",
+                "border-color": "#23263b"
+              },
+              fontFamily: {
+                sans: ["Inter", "sans-serif"],
+                mono: ["JetBrains Mono", "monospace"]
+              },
+              borderRadius: {
+                'portfolio': '12px'
+              }
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-navy-dark text-light-grey selection:bg-electric-blue/30 selection:text-electric-blue;
+                scroll-behavior: smooth;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .card-gradient {
+            background: linear-gradient(145deg, rgba(18, 20, 32, 1) 0%, rgba(10, 11, 16, 1) 100%);
+        }
+        .soft-glow {
+            box-shadow: 0 0 20px rgba(0, 224, 255, 0.05);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 224, 255, 0.03) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="font-sans">
+<nav class="fixed top-0 w-full z-50 bg-navy-dark/80 backdrop-blur-xl border-b border-border-color h-20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
+<div class="text-xl font-bold tracking-tight text-off-white font-mono">
+                Agustín Doricich
+            </div>
+<div class="hidden md:flex items-center gap-12">
+<ul class="flex gap-8 items-center list-none font-mono text-xs uppercase tracking-widest">
+<li><a class="text-electric-blue hover:opacity-80 transition-opacity" href="#inicio">Inicio</a></li>
+<li><a class="text-muted-grey hover:text-off-white transition-colors" href="#sobre-mi">Sobre Mí</a></li>
+<li><a class="text-muted-grey hover:text-off-white transition-colors" href="#proyectos">Proyectos</a></li>
+<li><a class="text-muted-grey hover:text-off-white transition-colors" href="#contacto">Contacto</a></li>
+</ul>
+<a class="px-5 py-2 border border-electric-blue/50 rounded-portfolio text-electric-blue font-mono text-xs uppercase tracking-widest hover:bg-electric-blue/10 transition-all" href="#">
+                    Descargar CV
+                </a>
+</div>
+<div class="md:hidden text-electric-blue">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</div>
+</nav>
+<main>
+<section class="min-h-screen flex items-center pt-20 px-8 relative hero-gradient" id="inicio">
+<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
+<div class="flex justify-center md:justify-start order-2 md:order-1">
+<div class="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
+<div class="absolute inset-0 border border-electric-blue/20 rounded-full animate-pulse"></div>
+<div class="absolute inset-4 border border-electric-blue/40 rounded-full"></div>
+<div class="w-[85%] h-[85%] rounded-full overflow-hidden flex items-center justify-center bg-navy-surface text-muted-grey border-2 border-electric-blue/10">
+<span class="material-symbols-outlined text-9xl opacity-20">person</span>
+</div>
+</div>
+</div>
+<div class="space-y-8 order-1 md:order-2">
+<div class="space-y-3">
+<span class="font-mono text-electric-blue tracking-[0.25em] text-sm uppercase block font-medium">
+                            Hola, mi nombre es
+                        </span>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-off-white">
+                            Agustín Doricich.
+                        </h1>
+<h2 class="text-3xl md:text-5xl font-bold tracking-tight text-muted-grey/80">
+                            Estudiante de Ingeniería Informática.
+                        </h2>
+<p class="text-xl text-electric-blue font-mono mt-4">Construyo cosas para la web.</p>
+</div>
+<p class="text-lg text-muted-grey max-w-xl leading-relaxed border-l-2 border-electric-blue/30 pl-6">
+                        Soy un desarrollador de software enfocado en crear experiencias digitales excepcionales. Actualmente, me especializo en construir productos accesibles y centrados en el usuario con las últimas tecnologías.
+                    </p>
+<div class="pt-4 flex flex-wrap gap-4 font-mono text-xs uppercase tracking-widest">
+<a class="px-8 py-4 bg-electric-blue text-navy-dark font-bold rounded-portfolio hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_10px_20px_-10px_rgba(0,224,255,0.4)]" href="#proyectos">
+                            Ver mis proyectos
+                        </a>
+<a class="px-8 py-4 border border-border-color text-off-white font-bold rounded-portfolio hover:bg-navy-surface transition-all" href="#contacto">
+                            Ponerme en contacto
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-8 bg-gradient-to-b from-navy-dark via-navy-surface/20 to-navy-dark" id="sobre-mi">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-12 gap-16">
+<div class="md:col-span-7 space-y-8">
+<div class="flex items-center gap-6">
+<h2 class="text-sm font-mono text-electric-blue flex items-center">
+<span class="text-lg mr-2">01.</span>
+<span class="text-off-white uppercase tracking-[0.2em] font-semibold">Sobre Mí</span>
+</h2>
+<div class="h-[1px] bg-gradient-to-r from-electric-blue/30 to-transparent flex-grow"></div>
+</div>
+<div class="space-y-6 text-muted-grey text-lg leading-relaxed">
+<p>
+                                Mi viaje en el desarrollo web comenzó con la curiosidad de entender cómo funcionaba el internet. Lo que empezó como un pasatiempo experimentando con HTML y CSS se convirtió en una carrera profesional donde la ingeniería de precisión se encuentra con el diseño elegante.
+                            </p>
+<p>
+                                Mi enfoque principal hoy en día es crear aplicaciones robustas y escalables. Me apasiona el código limpio, el rendimiento y la creación de interfaces que no solo se vean bien, sino que se sientan naturales al usarlas.
+                            </p>
+<p class="font-mono text-sm text-electric-blue italic">
+                                Tecnologías con las que trabajo recientemente:
+                            </p>
+</div>
+</div>
+<div class="md:col-span-5 grid grid-cols-2 gap-4">
+<div class="p-6 card-gradient border border-border-color rounded-portfolio soft-glow flex flex-col gap-3 hover:border-electric-blue/30 transition-colors">
+<span class="material-symbols-outlined text-electric-blue text-3xl">layers</span>
+<h3 class="font-mono text-xs uppercase tracking-widest text-off-white font-semibold">Frontend</h3>
+<p class="text-[10px] font-mono text-muted-grey leading-relaxed">
+                                [Frontend Tech A] / [Frontend Tech B]
+                            </p>
+</div>
+<div class="p-6 card-gradient border border-border-color rounded-portfolio soft-glow flex flex-col gap-3 hover:border-electric-blue/30 transition-colors">
+<span class="material-symbols-outlined text-electric-blue text-3xl">terminal</span>
+<h3 class="font-mono text-xs uppercase tracking-widest text-off-white font-semibold">Backend</h3>
+<p class="text-[10px] font-mono text-muted-grey leading-relaxed">
+                                [Backend Tech] / [Database]
+                            </p>
+</div>
+<div class="p-6 card-gradient border border-border-color rounded-portfolio soft-glow flex flex-col gap-3 hover:border-electric-blue/30 transition-colors">
+<span class="material-symbols-outlined text-electric-blue text-3xl">code</span>
+<h3 class="font-mono text-xs uppercase tracking-widest text-off-white font-semibold">Lenguajes</h3>
+<p class="text-[10px] font-mono text-muted-grey leading-relaxed">
+                                [Language X] / [Language Y]
+                            </p>
+</div>
+<div class="p-6 card-gradient border border-border-color rounded-portfolio soft-glow flex flex-col gap-3 hover:border-electric-blue/30 transition-colors">
+<span class="material-symbols-outlined text-electric-blue text-3xl">token</span>
+<h3 class="font-mono text-xs uppercase tracking-widest text-off-white font-semibold">Herramientas</h3>
+<p class="text-[10px] font-mono text-muted-grey leading-relaxed">
+                                [Tool 1] / [Tool 2]
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-8" id="proyectos">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-6 mb-16">
+<h2 class="text-sm font-mono text-electric-blue flex items-center">
+<span class="text-lg mr-2">02.</span>
+<span class="text-off-white uppercase tracking-[0.2em] font-semibold">Mis Proyectos</span>
+</h2>
+<div class="h-[1px] bg-gradient-to-r from-electric-blue/30 to-transparent flex-grow"></div>
+</div>
+<div class="group relative grid lg:grid-cols-12 gap-8 mb-20 items-center">
+<div class="lg:col-span-7 relative h-[400px] overflow-hidden rounded-portfolio shadow-2xl">
+<div class="absolute inset-0 bg-electric-blue/20 mix-blend-multiply transition-all duration-500 group-hover:bg-transparent z-10"></div>
+<img alt="Featured Project" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNBVFA-jellwmbFo8F_c6-xgjRdbmeeBMBtlAJUjueEmWLTs3SIv7H1b_gWvfNaCO5eMqdLtD_rRBZV2wRlKo_vII24_YZL-ucAkE-EBvz6wdQA6Lnf2Ub_wbyOYzWI7KYHD2osARG3kPAioltrruY579AFlAn7MH0g0Ls2WInApttydi2zrECh6n9mr1n7YDnonQ9lzCskMmtzMj3WkbuFtDXUTOuuTevoOwstW24h2jjp06KdYg7LKdnWvW9AGIL9iTxuHFSLr9O"/>
+</div>
+<div class="lg:col-span-5 lg:-ml-12 z-20">
+<div class="p-8 card-gradient border border-border-color rounded-portfolio soft-glow shadow-2xl">
+<span class="font-mono text-xs text-electric-blue uppercase tracking-[0.2em] mb-2 block">Proyecto Destacado</span>
+<h3 class="text-2xl font-bold text-off-white mb-4">Featured Project: [Descriptive Project Title]</h3>
+<p class="text-muted-grey text-base leading-relaxed mb-6">[Generic Project Description]</p>
+<div class="flex flex-wrap gap-3 mb-6">
+<span class="px-3 py-1 bg-navy-dark text-[10px] font-mono text-electric-blue/80 rounded-full border border-border-color">[Backend]</span>
+<span class="px-3 py-1 bg-navy-dark text-[10px] font-mono text-electric-blue/80 rounded-full border border-border-color">[Frontend]</span>
+<span class="px-3 py-1 bg-navy-dark text-[10px] font-mono text-electric-blue/80 rounded-full border border-border-color">[Database]</span>
+</div>
+<div class="flex gap-4">
+<a class="text-muted-grey hover:text-electric-blue transition-colors" href="#"><span class="material-symbols-outlined">link</span></a>
+<a class="text-muted-grey hover:text-electric-blue transition-colors" href="#"><span class="material-symbols-outlined">terminal</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-navy-surface/40 border border-border-color p-0 rounded-portfolio overflow-hidden hover:-translate-y-2 transition-all duration-300 group shadow-lg flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-navy-dark/40 group-hover:bg-transparent transition-colors z-10"></div>
+<img alt="Dashboard UI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNgsXCO7rZv6D6OQYuwOsG0iYH6KP9B4QXRw4Iw8FuylRt_UihG652H-mt1ipLPL_MosMkfmpN5IVOhMeG2TKIZ2g4bhFR002fCg-1MfgJ8SKnv1a94sLpQrVD9qmGsL-PhU68-lQX9VYgunuxCvylunmgbdWc7CVKRK0U3_9Pdm9crYIcnh2O9i-AQHmH-3VeZDDNiCEEdl_ZbR1UsWIfepckp3sdRTtBhpJ_z_v1miLIUspNK8VR7VBLLXcG9YvUlta2rXfrlmVb"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-electric-blue text-3xl">folder</span>
+<div class="flex gap-3 text-muted-grey">
+<span class="material-symbols-outlined text-xl cursor-pointer hover:text-electric-blue transition-colors">hub</span>
+<span class="material-symbols-outlined text-xl cursor-pointer hover:text-electric-blue transition-colors">open_in_new</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-off-white mb-4">Generic Dashboard UI</h3>
+<p class="text-muted-grey text-sm mb-6 flex-grow leading-relaxed">
+                                Interface concept for a comprehensive data management system focused on visual clarity and user experience.
+                            </p>
+<div class="font-mono text-[10px] text-electric-blue/60 uppercase tracking-widest flex gap-3">
+<span>React</span>
+<span>D3.js</span>
+<span>Tailwind</span>
+</div>
+</div>
+</div>
+<div class="bg-navy-surface/40 border border-border-color p-0 rounded-portfolio overflow-hidden hover:-translate-y-2 transition-all duration-300 group shadow-lg flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-navy-dark/40 group-hover:bg-transparent transition-colors z-10"></div>
+<img alt="API Service" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgRbRjt9enPqW93ESEofTnDEq0uv3KfHjOqX7GPljXqH0O-E-QNvirKJC-lqXltO1j9Q6J3cmUlzVcC4PzATse6B3SkxlhE0nosNhEWBpXp2Pp4F5zS2EjdosBVDIDMT2g3jmr3IFHY99xLP7EWWrv0t4NHq5jX8XHIKk-OikxyPEMIdEdLtW-W-dzxzPjSCCmcQ7nYCNzGJx5vivgNjiLM9EzUt7KCWJdmb5k99grTchuiIZjdfw7GuDy8tmf2hCd143oyNC9Cb8O"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-electric-blue text-3xl">api</span>
+<div class="flex gap-3 text-muted-grey">
+<span class="material-symbols-outlined text-xl cursor-pointer hover:text-electric-blue transition-colors">hub</span>
+<span class="material-symbols-outlined text-xl cursor-pointer hover:text-electric-blue transition-colors">open_in_new</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-off-white mb-4">API for [Service]</h3>
+<p class="text-muted-grey text-sm mb-6 flex-grow leading-relaxed">
+                                A robust back-end implementation providing secure and scalable endpoints for high-load external integrations.
+                            </p>
+<div class="font-mono text-[10px] text-electric-blue/60 uppercase tracking-widest flex gap-3">
+<span>Node.js</span>
+<span>PostgreSQL</span>
+<span>Redis</span>
+</div>
+</div>
+</div>
+<div class="bg-navy-surface/40 border border-border-color p-0 rounded-portfolio overflow-hidden hover:-translate-y-2 transition-all duration-300 group shadow-lg flex flex-col">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-navy-dark/40 group-hover:bg-transparent transition-colors z-10"></div>
+<img alt="Data Visualization" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg2lGcdmNxhfUNZXG1GDY8_ctSOeSShibTyKEiqm3GhAgl3PfYQtnVMMdgwN8EDdLWmIcjP_om8aCfU9vnMOYozjsPb5Tdr9JLoq7raJhN6ejQTItTzOZdhyZf-R57z6-Fej61juw0mplioaGkGjL6hrFTfLqjGYj4_n3GrGHi7a-TS6Hi-pfwJorVnTT5MFWh-83K860jiF_4OfyFTy0-tYf08i39HNikg4TQ2HsofxjuEwQ1MQX9GHgnca5My7yL-UwZmKyb17LH"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-electric-blue text-3xl">monitoring</span>
+<div class="flex gap-3 text-muted-grey">
+<span class="material-symbols-outlined text-xl cursor-pointer hover:text-electric-blue transition-colors">hub</span>
+<span class="material-symbols-outlined text-xl cursor-pointer hover:text-electric-blue transition-colors">open_in_new</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-off-white mb-4">Data Visualization Concept</h3>
+<p class="text-muted-grey text-sm mb-6 flex-grow leading-relaxed">
+                                Experimental visualization of complex datasets using modern WebGL rendering techniques and Three.js.
+                            </p>
+<div class="font-mono text-[10px] text-electric-blue/60 uppercase tracking-widest flex gap-3">
+<span>Three.js</span>
+<span>WebGL</span>
+<span>GLSL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 px-8 border-t border-border-color bg-gradient-to-b from-navy-dark to-navy-surface/10" id="contacto">
+<div class="max-w-3xl mx-auto text-center space-y-10">
+<div class="space-y-4">
+<span class="font-mono text-electric-blue text-sm uppercase tracking-[0.3em] font-semibold">03. ¿Qué sigue?</span>
+<h2 class="text-5xl md:text-6xl font-bold text-off-white tracking-tighter">Ponte en contacto</h2>
+</div>
+<p class="text-muted-grey text-xl leading-relaxed font-light">
+                    Estoy siempre abierto a charlar sobre código, colaborar en proyectos open-source interesantes, o simplemente hacer <i>networking</i>. Si tienes alguna pregunta o solo quieres saludar, ¡mi bandeja de entrada siempre está abierta!
+                </p>
+<div class="pt-8">
+<a class="inline-block px-14 py-6 border-2 border-electric-blue text-electric-blue font-mono text-sm uppercase tracking-[0.2em] font-bold rounded-portfolio hover:bg-electric-blue/10 transition-all shadow-[0_0_30px_-10px_rgba(0,224,255,0.3)]" href="mailto:hola@agustindoricich.com">
+                        Di Hola
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-16 bg-navy-dark border-t border-border-color">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-12">
+<div class="flex flex-col items-center md:items-start gap-3">
+<div class="text-xl font-bold text-off-white font-mono tracking-tight">
+                    Agustín Doricich
+                </div>
+<p class="font-mono text-[10px] text-muted-grey uppercase tracking-[0.2em]">
+                    © 2024 Agustín Doricich. Engineered for excellence.
+                </p>
+</div>
+<div class="flex gap-12 items-center font-mono text-[10px] uppercase tracking-[0.3em]">
+<a class="text-muted-grey hover:text-electric-blue transition-colors flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-base">link</span>
+                    LinkedIn
+                </a>
+<a class="text-muted-grey hover:text-electric-blue transition-colors flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-base">terminal</span>
+                    GitHub
+                </a>
+</div>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,70 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  techStack: string[];
+  image?: string;
+  githubLink?: string;
+  liveLink?: string;
+}
+
+const { title, description, techStack, image, githubLink, liveLink } = Astro.props;
+---
+
+<div class="group relative grid lg:grid-cols-12 gap-8 mb-20 items-center">
+  <!-- Project image -->
+  <div class="lg:col-span-7 relative h-[400px] overflow-hidden rounded-portfolio shadow-2xl">
+    <div class="absolute inset-0 bg-electric-blue/20 mix-blend-multiply transition-all duration-500 group-hover:bg-transparent z-10"></div>
+    {image ? (
+      <img
+        src={image}
+        alt={title}
+        class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+      />
+    ) : (
+      <div class="w-full h-full bg-navy-surface flex items-center justify-center">
+        <span class="material-symbols-outlined text-9xl text-muted-grey/20">image</span>
+      </div>
+    )}
+  </div>
+
+  <!-- Project info card -->
+  <div class="lg:col-span-5 lg:-ml-12 z-20">
+    <div class="p-8 card-gradient border border-border-color rounded-portfolio soft-glow shadow-2xl">
+      <span class="font-mono text-xs text-electric-blue uppercase tracking-[0.2em] mb-2 block">Proyecto Destacado</span>
+      <h3 class="text-2xl font-bold text-off-white mb-4">{title}</h3>
+      <p class="text-muted-grey text-base leading-relaxed mb-6">{description}</p>
+      <div class="flex flex-wrap gap-3 mb-6">
+        {techStack.map((tech) => (
+          <span class="px-3 py-1 bg-navy-dark text-[10px] font-mono text-electric-blue/80 rounded-full border border-border-color">
+            {tech}
+          </span>
+        ))}
+      </div>
+      <div class="flex gap-4">
+        {liveLink && (
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted-grey hover:text-electric-blue transition-colors"
+            aria-label="Ver demo en vivo"
+          >
+            <span class="material-symbols-outlined">link</span>
+          </a>
+        )}
+        {githubLink && (
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted-grey hover:text-electric-blue transition-colors"
+            aria-label="Ver código en GitHub"
+          >
+            <span class="material-symbols-outlined">terminal</span>
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+</div>

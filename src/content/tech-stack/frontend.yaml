@@ -1,0 +1,7 @@
+category: frontend
+icon: layers
+items:
+  - name: Astro
+  - name: React
+  - name: Tailwind CSS
+  - name: TypeScript

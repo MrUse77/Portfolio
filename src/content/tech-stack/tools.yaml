@@ -1,0 +1,7 @@
+category: tools
+icon: token
+items:
+  - name: Git
+  - name: Docker
+  - name: VS Code
+  - name: Postman

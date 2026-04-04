@@ -1,0 +1,15 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  technologies: string;
+}
+
+const { icon, title, technologies } = Astro.props;
+---
+
+<div class="p-6 card-gradient border border-border-color rounded-portfolio soft-glow flex flex-col gap-3 hover:border-electric-blue/30 transition-colors">
+  <span class="material-symbols-outlined text-electric-blue text-3xl">{icon}</span>
+  <h3 class="font-mono text-xs uppercase tracking-widest text-off-white font-semibold">{title}</h3>
+  <p class="text-[10px] font-mono text-muted-grey leading-relaxed">{technologies}</p>
+</div>

@@ -1,0 +1,113 @@
+---
+const navLinks = [
+  { href: '#inicio', label: 'Inicio' },
+  { href: '#sobre-mi', label: 'Sobre Mí' },
+  { href: '#proyectos', label: 'Proyectos' },
+  { href: '#contacto', label: 'Contacto' },
+];
+---
+
+<nav class="fixed top-0 w-full z-50 bg-navy-dark/80 backdrop-blur-xl border-b border-border-color h-20">
+  <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
+    <a href="#inicio" class="text-xl font-bold tracking-tight text-off-white font-mono hover:text-electric-blue transition-colors">
+      Agustín Doricich
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-12">
+      <ul class="flex gap-8 items-center list-none font-mono text-xs uppercase tracking-widest">
+        {navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="text-muted-grey hover:text-off-white transition-colors"
+              class:list={[link.href === '#inicio' && 'text-electric-blue hover:opacity-80']}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a
+        href="/cv-agustin-doricich.pdf"
+        download
+        class="px-5 py-2 border border-electric-blue/50 rounded-portfolio text-electric-blue font-mono text-xs uppercase tracking-widest hover:bg-electric-blue/10 transition-all"
+      >
+        Descargar CV
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-toggle"
+      class="md:hidden text-electric-blue cursor-pointer bg-transparent border-none p-2"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-40 bg-navy-dark/95 backdrop-blur-xl translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8"
+  >
+    <button
+      id="menu-close"
+      class="absolute top-6 right-8 text-electric-blue cursor-pointer bg-transparent border-none p-2"
+      aria-label="Cerrar menú"
+    >
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <ul class="flex flex-col gap-6 items-center list-none font-mono text-lg uppercase tracking-widest">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="mobile-nav-link text-muted-grey hover:text-electric-blue transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <a
+      href="/cv-agustin-doricich.pdf"
+      download
+      class="mobile-nav-link px-8 py-3 border border-electric-blue/50 rounded-portfolio text-electric-blue font-mono text-sm uppercase tracking-widest hover:bg-electric-blue/10 transition-all"
+    >
+      Descargar CV
+    </a>
+  </div>
+</nav>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function openMenu() {
+    mobileMenu?.classList.remove('translate-x-full');
+    mobileMenu?.classList.add('translate-x-0');
+    menuToggle?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    mobileMenu?.classList.remove('translate-x-0');
+    mobileMenu?.classList.add('translate-x-full');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  menuToggle?.addEventListener('click', openMenu);
+  menuClose?.addEventListener('click', closeMenu);
+  mobileNavLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>

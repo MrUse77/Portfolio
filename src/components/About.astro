@@ -1,0 +1,51 @@
+---
+import TechCard from './TechCard.astro';
+import { getCollection } from 'astro:content';
+
+const techStack = await getCollection('tech-stack');
+
+const techCards = techStack.map((item) => ({
+  icon: item.data.icon,
+  title: item.data.category.charAt(0).toUpperCase() + item.data.category.slice(1),
+  technologies: item.data.items.map((i) => i.name).join(' / '),
+}));
+---
+
+<section class="py-32 px-8 bg-gradient-to-b from-navy-dark via-navy-surface/20 to-navy-dark" id="sobre-mi">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-12 gap-16">
+      <!-- Bio text -->
+      <div class="md:col-span-7 space-y-8">
+        <div class="flex items-center gap-6">
+          <h2 class="text-sm font-mono text-electric-blue flex items-center">
+            <span class="text-lg mr-2">01.</span>
+            <span class="text-off-white uppercase tracking-[0.2em] font-semibold">Sobre Mí</span>
+          </h2>
+          <div class="h-[1px] bg-gradient-to-r from-electric-blue/30 to-transparent flex-grow"></div>
+        </div>
+        <div class="space-y-6 text-muted-grey text-lg leading-relaxed">
+          <p>
+            Mi viaje en el desarrollo web comenzó con la curiosidad de entender cómo funcionaba el internet. Lo que empezó como un pasatiempo experimentando con HTML y CSS se convirtió en una carrera profesional donde la ingeniería de precisión se encuentra con el diseño elegante.
+          </p>
+          <p>
+            Mi enfoque principal hoy en día es crear aplicaciones robustas y escalables. Me apasiona el código limpio, el rendimiento y la creación de interfaces que no solo se vean bien, sino que se sientan naturales al usarlas.
+          </p>
+          <p class="font-mono text-sm text-electric-blue italic">
+            Tecnologías con las que trabajo recientemente:
+          </p>
+        </div>
+      </div>
+
+      <!-- Tech cards grid -->
+      <div class="md:col-span-5 grid grid-cols-2 gap-4">
+        {techCards.map((card) => (
+          <TechCard
+            icon={card.icon}
+            title={card.title}
+            technologies={card.technologies}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

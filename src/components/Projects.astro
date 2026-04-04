@@ -1,0 +1,52 @@
+---
+import FeaturedProject from './FeaturedProject.astro';
+import ProjectCard from './ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const sorted = allProjects.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const featured = sorted.find((p) => p.data.featured);
+const regular = featured
+  ? sorted.filter((p) => p !== featured)
+  : sorted;
+---
+
+<section class="py-32 px-8" id="proyectos">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section header -->
+    <div class="flex items-center gap-6 mb-16">
+      <h2 class="text-sm font-mono text-electric-blue flex items-center">
+        <span class="text-lg mr-2">02.</span>
+        <span class="text-off-white uppercase tracking-[0.2em] font-semibold">Mis Proyectos</span>
+      </h2>
+      <div class="h-[1px] bg-gradient-to-r from-electric-blue/30 to-transparent flex-grow"></div>
+    </div>
+
+    <!-- Featured project -->
+    {featured && (
+      <FeaturedProject
+        title={featured.data.title}
+        description={featured.data.description}
+        techStack={featured.data.techStack}
+        image={featured.data.image}
+        githubLink={featured.data.githubLink}
+        liveLink={featured.data.liveLink}
+      />
+    )}
+
+    <!-- Regular projects grid -->
+    <div class="grid md:grid-cols-3 gap-6">
+      {regular.map((project) => (
+        <ProjectCard
+          title={project.data.title}
+          description={project.data.description}
+          techStack={project.data.techStack}
+          image={project.data.image}
+          githubLink={project.data.githubLink}
+          liveLink={project.data.liveLink}
+        />
+      ))}
+    </div>
+  </div>
+</section>
