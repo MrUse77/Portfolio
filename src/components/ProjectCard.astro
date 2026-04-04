@@ -14,7 +14,7 @@ const { title, description, techStack, image, githubLink, liveLink, icon = 'fold
 
 <div class="bg-navy-surface/40 border border-border-color p-0 rounded-portfolio overflow-hidden hover:-translate-y-2 transition-all duration-300 group shadow-lg flex flex-col">
   <!-- Image -->
-  <div class="h-48 overflow-hidden relative">
+  <div class="h-40 sm:h-48 overflow-hidden relative">
     <div class="absolute inset-0 bg-navy-dark/40 group-hover:bg-transparent transition-colors z-10"></div>
     {image ? (
       <img
@@ -30,7 +30,7 @@ const { title, description, techStack, image, githubLink, liveLink, icon = 'fold
   </div>
 
   <!-- Content -->
-  <div class="p-8 flex flex-col flex-grow">
+  <div class="p-5 sm:p-8 flex flex-col flex-grow">
     <div class="flex justify-between items-start mb-6">
       <span class="material-symbols-outlined text-electric-blue text-3xl">{icon}</span>
       <div class="flex gap-3 text-muted-grey">

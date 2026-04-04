@@ -7,8 +7,8 @@ const navLinks = [
 ];
 ---
 
-<nav class="fixed top-0 w-full z-50 bg-navy-dark/80 backdrop-blur-xl border-b border-border-color h-20">
-  <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
+<nav class="fixed top-0 w-full z-50 bg-navy-dark/80 backdrop-blur-xl border-b border-border-color h-16 sm:h-20">
+  <div class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-8 h-full">
     <a href="#inicio" class="text-xl font-bold tracking-tight text-off-white font-mono hover:text-electric-blue transition-colors">
       Agustín Doricich
     </a>
@@ -51,7 +51,7 @@ const navLinks = [
   <!-- Mobile menu overlay -->
   <div
     id="mobile-menu"
-    class="fixed inset-0 z-40 bg-navy-dark/95 backdrop-blur-xl translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8"
+    class="fixed inset-0 z-[60] bg-navy-dark/98 backdrop-blur-xl translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8"
   >
     <button
       id="menu-close"

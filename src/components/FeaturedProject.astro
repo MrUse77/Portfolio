@@ -11,9 +11,9 @@ interface Props {
 const { title, description, techStack, image, githubLink, liveLink } = Astro.props;
 ---
 
-<div class="group relative grid lg:grid-cols-12 gap-8 mb-20 items-center">
+<div class="group relative grid lg:grid-cols-12 gap-8 mb-12 md:mb-20 items-center">
   <!-- Project image -->
-  <div class="lg:col-span-7 relative h-[400px] overflow-hidden rounded-portfolio shadow-2xl">
+  <div class="lg:col-span-7 relative h-64 sm:h-80 md:h-96 lg:h-[400px] overflow-hidden rounded-portfolio shadow-2xl">
     <div class="absolute inset-0 bg-electric-blue/20 mix-blend-multiply transition-all duration-500 group-hover:bg-transparent z-10"></div>
     {image ? (
       <img
@@ -29,8 +29,8 @@ const { title, description, techStack, image, githubLink, liveLink } = Astro.pro
   </div>
 
   <!-- Project info card -->
-  <div class="lg:col-span-5 lg:-ml-12 z-20">
-    <div class="p-8 card-gradient border border-border-color rounded-portfolio soft-glow shadow-2xl">
+  <div class="lg:col-span-5 lg:-ml-12 z-20 -mt-12 lg:mt-0">
+    <div class="p-6 sm:p-8 card-gradient border border-border-color rounded-portfolio soft-glow shadow-2xl">
       <span class="font-mono text-xs text-electric-blue uppercase tracking-[0.2em] mb-2 block">Proyecto Destacado</span>
       <h3 class="text-2xl font-bold text-off-white mb-4">{title}</h3>
       <p class="text-muted-grey text-base leading-relaxed mb-6 font-normal">{description}</p>
