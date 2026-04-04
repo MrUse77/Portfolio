@@ -13,17 +13,17 @@ const currentYear = new Date().getFullYear();
       <div class="text-xl font-bold text-off-white font-mono tracking-tight">
         Agustín Doricich
       </div>
-      <p class="font-mono text-[10px] text-muted-grey uppercase tracking-[0.2em]">
+      <p class="font-mono text-xs text-light-grey uppercase tracking-[0.2em] font-medium">
         © {currentYear} Agustín Doricich. Engineered for excellence.
       </p>
     </div>
-    <div class="flex gap-12 items-center font-mono text-[10px] uppercase tracking-[0.3em]">
+    <div class="flex gap-12 items-center font-mono text-xs uppercase tracking-[0.3em] font-semibold">
       {socialLinks.map((link) => (
         <a
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-muted-grey hover:text-electric-blue transition-colors flex items-center gap-3"
+          class="text-light-grey hover:text-electric-blue transition-colors flex items-center gap-3"
         >
           <span class="material-symbols-outlined text-base">{link.icon}</span>
           {link.label}
