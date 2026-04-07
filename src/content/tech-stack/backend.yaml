@@ -1,7 +1,8 @@
 category: backend
-icon: terminal
+icon: "dns"
 items:
-  - name: Node.js
-  - name: Express
-  - name: MongoDB
-  - name: PostgreSQL
+  - name: "Node.js"
+  - name: "Express"
+  - name: "Bun"
+  - name: "TypeScript"
+  - name: "JavaScript"

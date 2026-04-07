@@ -1,0 +1,7 @@
+category: embedded
+icon: "memory"
+items:
+  - name: "Arduino"
+  - name: "C/C++"
+  - name: "Sensores I2C"
+  - name: "Protocolos Serie"

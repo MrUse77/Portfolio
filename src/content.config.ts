@@ -41,7 +41,7 @@ const education = defineCollection({
 const techStack = defineCollection({
   type: 'data',
   schema: z.object({
-    category: z.enum(['frontend', 'backend', 'languages', 'tools']),
+    category: z.enum(['frontend', 'backend', 'databases', 'systems', 'embedded', 'gamedev']),
     icon: z.string(),
     items: z.array(z.object({
       name: z.string(),

@@ -1,7 +1,5 @@
 category: frontend
-icon: layers
+icon: "web"
 items:
-  - name: Astro
-  - name: React
-  - name: Tailwind CSS
-  - name: TypeScript
+  - name: "React"
+  - name: "Tailwind CSS"

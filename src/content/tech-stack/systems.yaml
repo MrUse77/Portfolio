@@ -1,0 +1,9 @@
+category: systems
+icon: "terminal"
+items:
+  - name: "Linux (Arch)"
+  - name: "Docker"
+  - name: "Git"
+  - name: "Shell Scripting"
+  - name: "Hyprland"
+  - name: "Zellij"

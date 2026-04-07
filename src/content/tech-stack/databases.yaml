@@ -1,0 +1,6 @@
+category: databases
+icon: "storage"
+items:
+  - name: "PostgreSQL"
+  - name: "MySQL"
+  - name: "MongoDB"

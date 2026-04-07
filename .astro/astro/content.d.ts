@@ -140,31 +140,84 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"projects": {
-"01-inventory-system.md": {
-	id: "01-inventory-system.md";
-  slug: "01-inventory-system";
+		"education": {
+"01-unlam.md": {
+	id: "01-unlam.md";
+  slug: "01-unlam";
+  body: string;
+  collection: "education";
+  data: any
+} & { render(): Render[".md"] };
+"02-eest8.md": {
+	id: "02-eest8.md";
+  slug: "02-eest8";
+  body: string;
+  collection: "education";
+  data: any
+} & { render(): Render[".md"] };
+"03-argentina-programa.md": {
+	id: "03-argentina-programa.md";
+  slug: "03-argentina-programa";
+  body: string;
+  collection: "education";
+  data: any
+} & { render(): Render[".md"] };
+"04-utn-reparacion-pc.md": {
+	id: "04-utn-reparacion-pc.md";
+  slug: "04-utn-reparacion-pc";
+  body: string;
+  collection: "education";
+  data: any
+} & { render(): Render[".md"] };
+};
+"experience": {
+"01-freelance-backend.md": {
+	id: "01-freelance-backend.md";
+  slug: "01-freelance-backend";
+  body: string;
+  collection: "experience";
+  data: any
+} & { render(): Render[".md"] };
+"02-biomedic.md": {
+	id: "02-biomedic.md";
+  slug: "02-biomedic";
+  body: string;
+  collection: "experience";
+  data: any
+} & { render(): Render[".md"] };
+};
+"projects": {
+"01-dotfiles-hyprland.md": {
+	id: "01-dotfiles-hyprland.md";
+  slug: "01-dotfiles-hyprland";
   body: string;
   collection: "projects";
   data: any
 } & { render(): Render[".md"] };
-"02-analytics-dashboard.md": {
-	id: "02-analytics-dashboard.md";
-  slug: "02-analytics-dashboard";
+"02-mica-sistema-seguridad.md": {
+	id: "02-mica-sistema-seguridad.md";
+  slug: "02-mica-sistema-seguridad";
   body: string;
   collection: "projects";
   data: any
 } & { render(): Render[".md"] };
-"03-ecommerce-api.md": {
-	id: "03-ecommerce-api.md";
-  slug: "03-ecommerce-api";
+"03-hsr-api.md": {
+	id: "03-hsr-api.md";
+  slug: "03-hsr-api";
   body: string;
   collection: "projects";
   data: any
 } & { render(): Render[".md"] };
-"04-data-viz-3d.md": {
-	id: "04-data-viz-3d.md";
-  slug: "04-data-viz-3d";
+"04-acortador-urls.md": {
+	id: "04-acortador-urls.md";
+  slug: "04-acortador-urls";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".md"] };
+"05-pong-raylib.md": {
+	id: "05-pong-raylib.md";
+  slug: "05-pong-raylib";
   body: string;
   collection: "projects";
   data: any
@@ -174,19 +227,19 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		"education": Record<string, {
-  id: string;
-  collection: "education";
-  data: any;
-}>;
-"experience": Record<string, {
-  id: string;
-  collection: "experience";
-  data: any;
-}>;
-"tech-stack": {
+		"tech-stack": {
 "backend": {
 	id: "backend";
+  collection: "tech-stack";
+  data: any
+};
+"databases": {
+	id: "databases";
+  collection: "tech-stack";
+  data: any
+};
+"embedded": {
+	id: "embedded";
   collection: "tech-stack";
   data: any
 };
@@ -195,13 +248,13 @@ declare module 'astro:content' {
   collection: "tech-stack";
   data: any
 };
-"languages": {
-	id: "languages";
+"gamedev": {
+	id: "gamedev";
   collection: "tech-stack";
   data: any
 };
-"tools": {
-	id: "tools";
+"systems": {
+	id: "systems";
   collection: "tech-stack";
   data: any
 };

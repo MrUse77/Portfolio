@@ -3,18 +3,22 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
 import Projects from '../components/Projects.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 ---
 
-<Layout title="Agustín Doricich | Portfolio - Creative Developer">
+<Layout title="Agustín Doricich | Backend Developer Portfolio">
   <Navbar />
   <main>
-    <Hero />
+    <Hero photoUrl="/IMG_20221212_221947_944.png" />
     <About />
     <Projects />
+    <Experience />
+    <Education />
     <Contact />
   </main>
   <Footer />

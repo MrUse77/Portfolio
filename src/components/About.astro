@@ -7,7 +7,7 @@ const techStack = await getCollection('tech-stack');
 const techCards = techStack.map((item) => ({
   icon: item.data.icon,
   title: item.data.category.charAt(0).toUpperCase() + item.data.category.slice(1),
-  technologies: item.data.items.map((i) => i.name).join(' / '),
+  technologies: item.data.items.map((tech: { name: string }) => tech.name).join(' / '),
 }));
 ---
 
@@ -25,19 +25,19 @@ const techCards = techStack.map((item) => ({
         </div>
         <div class="space-y-6 text-muted-grey text-lg leading-relaxed font-normal">
           <p>
-            Mi viaje en el desarrollo web comenzó con la curiosidad de entender cómo funcionaba el internet. Lo que empezó como un pasatiempo experimentando con HTML y CSS se convirtió en una carrera profesional donde la ingeniería de precisión se encuentra con el diseño elegante.
+            Mi viaje en la tecnología comenzó con la curiosidad de entender cómo funcionan las cosas por dentro. Lo que empezó como un pasatiempo armando circuitos y experimentando con electrónica se convirtió en una carrera profesional donde el código limpio se encuentra con la ingeniería de sistemas.
           </p>
           <p>
-            Mi enfoque principal hoy en día es crear aplicaciones robustas y escalables. Me apasiona el código limpio, el rendimiento y la creación de interfaces que no solo se vean bien, sino que se sientan naturales al usarlas.
+            Hoy me especializo en backend: diseño APIs REST, gestiono bases de datos SQL y NoSQL, y configuro entornos de desarrollo que optimizan mi flujo de trabajo. No le tengo miedo a nada low-level — desde configurar un compositor de Wayland hasta programar sensores con Arduino.
           </p>
           <p class="font-mono text-sm text-electric-blue italic">
-            Tecnologías con las que trabajo recientemente:
+            Tecnologías con las que trabajo día a día:
           </p>
         </div>
       </div>
 
       <!-- Tech cards grid -->
-      <div class="md:col-span-5 grid grid-cols-2 gap-4">
+      <div class="md:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
         {techCards.map((card) => (
           <TechCard
             icon={card.icon}
