@@ -4,7 +4,7 @@ const githubUrl = import.meta.env.PUBLIC_GITHUB_URL || 'https://shorter.agusdori
 
 const socialLinks = [
   { href: linkedinUrl, label: 'LinkedIn', icon: 'link' },
-  { href: githubUrl, label: 'GitHub', icon: '' },
+  { href: githubUrl, label: 'GitHub', icon: 'code' },
 ];
 
 const currentYear = new Date().getFullYear();
@@ -28,11 +28,7 @@ const currentYear = new Date().getFullYear();
           rel="noopener noreferrer"
           class="text-light-grey hover:text-electric-blue transition-colors flex items-center gap-3"
         >
-          {link.label === 'GitHub' ? (
-            <span class="font-mono text-[17px] leading-none relative top-[1px]">{link.icon}</span>
-          ) : (
-            <span class="material-symbols-outlined text-base">{link.icon}</span>
-          )}
+          <span class="material-symbols-outlined text-base">{link.icon}</span>
           {link.label}
         </a>
       ))}
